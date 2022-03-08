@@ -1,5 +1,6 @@
 import * as React from 'react';
-import {Outlet, Link} from "react-router-dom"; // NOTE: Remember to use Outlet when you create layouts!
+import {Outlet} from "react-router-dom"; // NOTE: Remember to use Outlet when you create layouts!
+import { Link } from '@mui/material';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -15,15 +16,8 @@ import MenuItem from '@mui/material/MenuItem';
 
 const settings = ['Coming Soon!'];
 
-const pagesWithUrl = [
-  {name: "Home", url: "/"},
-  {name: "Apps", url: "/apps"},
-  {name: "Pricing", url: "/pricing"},
-  {name: "Contact", url: "/contact"},
-]
-
 const Layout = (props) => {
-
+  const pagesWithUrl = props.navbarPages
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -67,6 +61,7 @@ const Layout = (props) => {
               >
                 <MenuIcon />
               </IconButton>
+              
               <Menu
                 id="menu-appbar"
                 anchorEl={anchorElNav}
@@ -86,7 +81,7 @@ const Layout = (props) => {
                 }}
               >
                 {pagesWithUrl.map((page) => (
-                  <Link to={page.url} style={{textDecoration: 'none', color: '#222222'}}>
+                  <Link href={page.url} style={{textDecoration: 'none', color: '#222222'}}>
                     <MenuItem key={page.name} onClick={handleCloseNavMenu}>
                       <Typography textAlign="center">{page.name}</Typography>
                     </MenuItem>
@@ -94,8 +89,8 @@ const Layout = (props) => {
                 ))}
               </Menu>
             </Box>
+            
             <Box sx={{flexGrow: 1, display: {xs: 'none', md: 'flex'}}}>
-
               {pagesWithUrl.map((page) => (
                 <Button href={page.url} key={page.name} onClick={handleCloseNavMenu} sx={{my: 2, color: 'white', display: 'block'}}>
                   <Typography>{page.name}</Typography>

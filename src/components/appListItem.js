@@ -16,6 +16,7 @@ export default function AppListItem(props) {
    * props.name (string)
    * props.description (string)
    * props.route (string)
+   * props.image (string)
    */
 
   return (
@@ -23,7 +24,7 @@ export default function AppListItem(props) {
       <Card sx={{height: '100%', display: 'flex', flexDirection: 'column'}}>
         <CardMedia
           component="img"
-          image="https://media.istockphoto.com/vectors/blurred-large-panoramic-summer-background-multicolored-gradient-vector-id1308575675?k=20&m=1308575675&s=612x612&w=0&h=BRUnyR9dR36QZut6WNP9L5o32wc-GR1YTbD0J2Ffj-U="
+          image={props.image}
           alt="app"
         />
         <CardContent sx={{flexGrow: 1}}>
@@ -35,7 +36,7 @@ export default function AppListItem(props) {
           </Typography>
         </CardContent>
         <CardActions>
-          <Button href={"app/" + props.route} size="small" variant="contained">GO TO APP</Button>
+          <Button href={"/app/" + props.route} size="small" variant="contained">GO TO APP</Button>
         </CardActions>
       </Card>
     </Grid>

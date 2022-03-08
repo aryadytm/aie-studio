@@ -6,6 +6,7 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import AppListItem from '../components/appListItem';
 import Button from '@mui/material/Button';
+import { Link } from 'react-router-dom';
 
 
 export default function Home() {
@@ -39,7 +40,7 @@ export default function Home() {
               spacing={2}
               justifyContent="center"
             >
-              <Button sx={{mt: 4}} href="apps" variant="contained">EXPLORE OUR APPS</Button>
+              <Button sx={{mt: 4}} href="apps" variant="contained">START USING OUR APPS</Button>
               {/* <Button variant="outlined">Secondary action</Button> */}
             </Stack>
           </Container>

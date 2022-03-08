@@ -19,7 +19,7 @@ export default function Contact() {
           <CardMedia
             component="img"
             height="140"
-            image="https://media.istockphoto.com/vectors/blurred-large-panoramic-summer-background-multicolored-gradient-vector-id1308575675?k=20&m=1308575675&s=612x612&w=0&h=BRUnyR9dR36QZut6WNP9L5o32wc-GR1YTbD0J2Ffj-U="
+            image={process.env.PUBLIC_URL + "/images/binus-university.jpeg"}
             alt="coming soon"
           />
           <CardContent>

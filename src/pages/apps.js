@@ -50,7 +50,12 @@ export default function Apps(props) {
           {/* End hero unit */}
           <Grid container spacing={4}>
             {props.apps.map((application) => (
-              <AppListItem name={application.name} description={application.description} route={application.route}></AppListItem>
+              <AppListItem
+                name={application.name}
+                image={application.image}
+                description={application.description}
+                route={application.route}
+              ></AppListItem>
             ))}
           </Grid>
         </Container>

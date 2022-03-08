@@ -12,6 +12,13 @@ import Pricing from './pages/pricing'
 // Apps
 import ImageBGTool from './apps/imagebgtool'
 
+// TODO: Set navbar pages here
+const navbarPages = [
+  {name: "Home", url: "/"},
+  {name: "Apps", url: "/apps"},
+  {name: "Pricing", url: "/pricing"},
+  {name: "Contact", url: "/contact"},
+]
 
 const apps = [
   {
@@ -20,9 +27,8 @@ const apps = [
     route: "image-background-removal",
     background: "",
     icon: "",
-    element: <ImageBGTool/>
+    element: <ImageBGTool />
   },
-  
 ]
 
 const App = () => {
@@ -32,7 +38,7 @@ const App = () => {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="*" element={<NoPage />} />
-          <Route path="apps" element={<Apps apps={apps}/>} />
+          <Route path="apps" element={<Apps apps={apps} />} />
           <Route path="pricing" element={<Pricing />} />
           <Route path="contact" element={<Contact />} />
           <Route path="app">
@@ -43,7 +49,6 @@ const App = () => {
                 return <Route path={application.route} element={application.element} />
               })
             }
-            {/* <Route path="image-background-removal" element={<ImageBGTool />} /> */}
           </Route>
         </Route>
       </Routes>

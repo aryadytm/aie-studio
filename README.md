@@ -1,6 +1,12 @@
-# Getting Started with Create React App
+# Entrepreneur App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Deploy
+
+To deploy the site, run these commands
+```
+npm run build
+netlify deploy
+```
 
 ## Available Scripts
 

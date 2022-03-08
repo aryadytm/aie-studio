@@ -17,9 +17,9 @@ const settings = ['Coming Soon!'];
 
 const pagesWithUrl = [
   {name: "Home", url: "/"},
-  {name: "Apps", url: "apps"},
-  {name: "Pricing", url: "pricing"},
-  {name: "Contact", url: "contact"},
+  {name: "Apps", url: "/apps"},
+  {name: "Pricing", url: "/pricing"},
+  {name: "Contact", url: "/contact"},
 ]
 
 const Layout = (props) => {

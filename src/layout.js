@@ -13,17 +13,17 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 
-const pages = ['Home', 'Apps', 'Contact'];
 const settings = ['Coming Soon!'];
 
 const pagesWithUrl = [
   {name: "Home", url: "/"},
   {name: "Apps", url: "apps"},
+  {name: "Pricing", url: "pricing"},
   {name: "Contact", url: "contact"},
 ]
 
 const Layout = (props) => {
-  
+
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -85,23 +85,23 @@ const Layout = (props) => {
                   display: {xs: 'block', md: 'none'},
                 }}
               >
-                {pages.map((page) => (
-                  <MenuItem key={page} onClick={handleCloseNavMenu}>
-                    <Typography textAlign="center">{page}</Typography>
-                  </MenuItem>
+                {pagesWithUrl.map((page) => (
+                  <Link to={page.url} style={{textDecoration: 'none', color: '#222222'}}>
+                    <MenuItem key={page.name} onClick={handleCloseNavMenu}>
+                      <Typography textAlign="center">{page.name}</Typography>
+                    </MenuItem>
+                  </Link>
                 ))}
               </Menu>
             </Box>
             <Box sx={{flexGrow: 1, display: {xs: 'none', md: 'flex'}}}>
-              
+
               {pagesWithUrl.map((page) => (
-                <Link to={page.url} style={{ textDecoration: 'none' }}>
-                  <Button key={page.name} onClick={handleCloseNavMenu} sx={{my: 2, color: 'white', display: 'block'}}>
-                    <Typography>{page.name}</Typography>
-                  </Button>
-                </Link>
+                <Button href={page.url} key={page.name} onClick={handleCloseNavMenu} sx={{my: 2, color: 'white', display: 'block'}}>
+                  <Typography>{page.name}</Typography>
+                </Button>
               ))}
-                
+
             </Box>
 
             <Box sx={{flexGrow: 0}}>
@@ -126,19 +126,19 @@ const Layout = (props) => {
                 open={Boolean(anchorElUser)}
                 onClose={handleCloseUserMenu}
               >
-                
+
                 {settings.map((setting) => (
                   <MenuItem key={setting} onClick={handleCloseUserMenu}>
                     <Typography textAlign="center">{setting}</Typography>
                   </MenuItem>
                 ))}
-                
+
               </Menu>
             </Box>
           </Toolbar>
         </Container>
       </AppBar>
-      <Outlet />  
+      <Outlet />
     </>
 
   );

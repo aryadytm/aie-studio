@@ -8,6 +8,7 @@ import Home from "./pages/home"
 import NoPage from "./pages/noPage"
 import Apps from './pages/apps'
 import Contact from './pages/contact'
+import Pricing from './pages/pricing'
 // Apps
 import ImageBGTool from './apps/imagebgtool'
 
@@ -32,6 +33,7 @@ const App = () => {
           <Route index element={<Home />} />
           <Route path="*" element={<NoPage />} />
           <Route path="apps" element={<Apps apps={apps}/>} />
+          <Route path="pricing" element={<Pricing />} />
           <Route path="contact" element={<Contact />} />
           <Route path="app">
             <Route index element={<NoPage />} />

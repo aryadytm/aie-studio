@@ -28,7 +28,7 @@ export default function Apps(props) {
           sx={{
             bgcolor: 'background.paper',
             pt: 8,
-            pb: 6,
+            pb: 0,
           }}
         >
           <Container maxWidth="sm">
@@ -44,14 +44,6 @@ export default function Apps(props) {
             <Typography variant="h5" align="center" color="text.secondary" paragraph>
               Some of these apps are powered by AI so it looks intelligent!
             </Typography>
-            <Stack
-              direction="row"
-              spacing={2}
-              justifyContent="center"
-            >
-              {/* <Button variant="contained">Main call to action</Button> */}
-              {/* <Button variant="outlined">Secondary action</Button> */}
-            </Stack>
           </Container>
         </Box>
         <Container sx={{py: 8}} maxWidth="md">

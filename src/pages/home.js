@@ -17,7 +17,7 @@ export default function Home() {
         <Box
           sx={{
             bgcolor: 'background.paper',
-            pt: 8,
+            pt: 12,
             pb: 6,
           }}
         >
@@ -29,17 +29,17 @@ export default function Home() {
               color="text.primary"
               gutterBottom
             >
-              Entrepreneurship Apps
+              Entrepreneur Apps
             </Typography>
             <Typography variant="h5" align="center" color="text.secondary" paragraph>
-              Dedicated for Entrepreneurship group. We build apps that uses AI (artificial intelligence).
+              Dedicated for Entrepreneurship group. We build high-tech apps that uses AI (artificial intelligence).
             </Typography>
             <Stack
               direction="row"
               spacing={2}
               justifyContent="center"
             >
-              <Button href="apps" variant="contained">EXPLORE OUR APPS</Button>
+              <Button sx={{mt: 4}} href="apps" variant="contained">EXPLORE OUR APPS</Button>
               {/* <Button variant="outlined">Secondary action</Button> */}
             </Stack>
           </Container>

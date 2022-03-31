@@ -4,12 +4,12 @@ import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
-import AppListItem from '../components/appListItem';
+import AppItem from '../components/AppListItem';
 
 
 const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-export default function Apps(props) {
+export default function Apps({ apps }) {
   /**
    * props:
    * - apps
@@ -42,20 +42,15 @@ export default function Apps(props) {
               Apps
             </Typography>
             <Typography variant="h5" align="center" color="text.secondary" paragraph>
-              Some of these apps are powered by AI so it looks intelligent!
+              Here are our AI powered apps. Use them to help you create better content.
             </Typography>
           </Container>
         </Box>
         <Container sx={{py: 8}} maxWidth="md">
           {/* End hero unit */}
           <Grid container spacing={4}>
-            {props.apps.map((application) => (
-              <AppListItem
-                name={application.name}
-                image={application.image}
-                description={application.description}
-                route={application.route}
-              ></AppListItem>
+            {apps.map((application) => (
+              <AppItem appItem={application}></AppItem>
             ))}
           </Grid>
         </Container>

@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography';
 import {Button, CardActionArea, CardActions, Container} from '@mui/material';
 
 
-export default function Pricing() {
+export default function Roadmap() {
   return (
     <Container sx={{height: '80vh', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
       <Card sx={{maxWidth: 345}}>
@@ -14,15 +14,15 @@ export default function Pricing() {
           <CardMedia
             component="img"
             height="140"
-            image={process.env.PUBLIC_URL + "/images/pricing.png"}
+            image={process.env.PUBLIC_URL + "/images/blog.webp"}
             alt="coming soon"
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
-              Free For Now!
+              Coming Soon!
             </Typography>
             <Typography variant="body2" color="text.secondary">
-              Currently, you can use the app for free.
+              We will create a roadmap for our AI apps!
             </Typography>
           </CardContent>
         </CardActionArea>

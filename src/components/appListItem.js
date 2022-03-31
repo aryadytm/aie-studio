@@ -10,33 +10,34 @@ import {Button, CardActionArea, CardActions} from '@mui/material';
 import { Link } from '@mui/material';
 
 
-export default function AppListItem(props) {
+export default function AppListItem({ appItem }) {
   /**
-   * props.icon (string, available from svg icon list)
-   * props.name (string)
-   * props.description (string)
-   * props.route (string)
-   * props.image (string)
+   * icon (string, available from svg icon list)
+   * name (string)
+   * description (string)
+   * route (string)
+   * image (string)
    */
+  const { name, description, route, image } = appItem
 
   return (
-    <Grid item key={props.name} xs={12} sm={6} md={4}>
+    <Grid item key={name} xs={12} sm={6} md={4}>
       <Card sx={{height: '100%', display: 'flex', flexDirection: 'column'}}>
         <CardMedia
           component="img"
-          image={props.image}
+          image={image}
           alt="app"
         />
         <CardContent sx={{flexGrow: 1}}>
           <Typography gutterBottom variant="h6" component="h2">
-            {props.name}
+            {name}
           </Typography>
           <Typography variant="p">
-            {props.description}
+            {description}
           </Typography>
         </CardContent>
         <CardActions>
-          <Button href={"/app/" + props.route} size="small" variant="contained">GO TO APP</Button>
+          <Button href={"/app/" + route} size="small" variant="contained">GO TO APP</Button>
         </CardActions>
       </Card>
     </Grid>

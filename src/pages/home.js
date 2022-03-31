@@ -4,7 +4,7 @@ import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
-import AppListItem from '../components/appListItem';
+import AppListItem from '../components/AppListItem';
 import Button from '@mui/material/Button';
 import { Link } from 'react-router-dom';
 
@@ -30,10 +30,10 @@ export default function Home() {
               color="text.primary"
               gutterBottom
             >
-              Entrepreneur Apps
+              AI for Everyone
             </Typography>
             <Typography variant="h5" align="center" color="text.secondary" paragraph>
-              Dedicated for Entrepreneurship group. We build high-tech apps that uses AI (artificial intelligence).
+              We build high tech apps that use AI (artificial intelligence). Check our apps!
             </Typography>
             <Stack
               direction="row"

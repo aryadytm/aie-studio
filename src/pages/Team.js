@@ -10,10 +10,11 @@ import {Button, CardActionArea, CardActions} from '@mui/material';
 import {Link} from 'react-router-dom';
 
 
-export default function Contact() {
+export default function Team({team}) {
+  // props.team {name, nim, position}
 
   return (
-    <Container sx={{height: '80vh', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+    <Container sx={{mt: 8, pb: 8, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
       <Card sx={{maxWidth: 345}}>
         <CardActionArea>
           <CardMedia
@@ -24,10 +25,23 @@ export default function Contact() {
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
-              Business Information Technology
+              BINUS Entrepreneurship Team
             </Typography>
             <Typography variant="body2" color="text.secondary">
-              Kelompok Entrepreneurship
+              <br />
+              {
+                team.map(member => (
+                  <>
+                    <b>{member.name}</b>
+                    <br />
+                    {member.nim}
+                    <br />
+                    {member.position}
+                    <br />
+                    <br />
+                  </>
+                ))
+              }
             </Typography>
           </CardContent>
         </CardActionArea>

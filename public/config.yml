@@ -1,0 +1,18 @@
+navBarPages:
+- name: "Home"
+  url: "/"
+- name: "Apps"
+  url: "/apps"
+- name: "Pricing"
+  url: "/pricing"
+- name: "Blog"
+  url: "/blog"
+- name: "Team" 
+  url: "/team"
+
+apps:
+- name: "Photo Background Removal"
+  description: "Use AI to remove background of photo in seconds."
+  route: "photo-background-removal"
+  image: "images/app-photo-background-removal.jpg"
+  element: <PhotoBGTool />

@@ -42,7 +42,7 @@ export default function Apps({ apps }) {
               Apps
             </Typography>
             <Typography variant="h5" align="center" color="text.secondary" paragraph>
-              Here are our AI powered apps. Use them to help you create better content.
+              Here are our <b style={{color: "#0480fc"}}>AI powered apps</b>. Use them to help you create better content in less time.
             </Typography>
           </Container>
         </Box>

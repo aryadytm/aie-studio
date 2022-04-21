@@ -40,10 +40,56 @@ const apps = [
       }
       return <PhotoBGRemoverApp data={data} />
     })(),
+    isOnline: true,
   },
   
   // App 2: Video Background Removal
+  {
+    name: "Video Background Removal",
+    description: "Need to change virtual background? Or just need to remove the background? This AI app will help.",
+    route: "video-background-removal",
+    image: "images/apps/video-background-removal.jpg",
+    element: (() => {
+      const data = {
+        iframeUrlMain: "https://",
+        iframeUrlBackup: "https://",
+      }
+      return <></>
+    })(),
+    isOnline: false,
+  },
   
+  // App 3: Realistic Text To Speech
+  {
+    name: "Realistic Text-to-Speech",
+    description: "This app use AI to generate realistic human-like voices. Just from a text!",
+    route: "realistic-text-to-speech",
+    image: "images/apps/realistic-text-to-speech.jpg",
+    element: (() => {
+      const data = {
+        iframeUrlMain: "https://",
+        iframeUrlBackup: "https://",
+      }
+      return <></>
+    })(),
+    isOnline: false,
+  },
+  
+  // More apps
+  {
+    name: "Our Next AI App",
+    description: "We continuously build AI apps to meet what the world needs. Stay tuned for our next apps!",
+    route: "next-app",
+    image: "images/apps/next-app.jpg",
+    element: (() => {
+      const data = {
+        iframeUrlMain: "https://",
+        iframeUrlBackup: "https://",
+      }
+      return <></>
+    })(),
+    isOnline: false,
+  },
 ]
 
 // const team = [
@@ -77,8 +123,8 @@ const apps = [
 
 const team = [
   {
-    name: "",
-    nim: "We are a group of students from BINUS University majoring in Business Information Technology.",
+    name: "Entrepreneurship Ideation - Kelompok 2 - LA80",
+    nim: "We are a group of students from BINUS University majoring in Business Information Technology and Accounting Technology.",
     position: ""
   },
 ]

@@ -33,7 +33,7 @@ export default function Home() {
               AI for Everyone
             </Typography>
             <Typography variant="h5" align="center" color="text.secondary" paragraph>
-              We build high tech apps that use AI (artificial intelligence). Check our apps!
+              We build <b style={{color: "#0480fc"}}>high tech apps</b> that use AI (artificial intelligence). Check our apps!
             </Typography>
             <Stack
               direction="row"
@@ -42,6 +42,9 @@ export default function Home() {
             >
               <Button sx={{mt: 4}} href="apps" variant="contained">START USING OUR APPS</Button>
               {/* <Button variant="outlined">Secondary action</Button> */}
+            </Stack>
+            <Stack sx={{mt: 8, pb: 8}}>
+              <img src={process.env.PUBLIC_URL + "/images/mockup.jpg"} alt="AIE Studio Apps" />
             </Stack>
           </Container>
         </Box>

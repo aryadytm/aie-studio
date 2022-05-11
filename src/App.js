@@ -12,7 +12,11 @@ import Pricing from './pages/Pricing'
 import Blog from './pages/Blog'
 import Roadmap from './pages/Roadmap'
 // Apps
-import PhotoBGRemoverApp from './pages/apps/PhotoBGRemoverApp'
+import AppRemovePhotoBackground from './pages/apps/AppRemovePhotoBackground'
+import AppRemovePhotoObject from './pages/apps/AppRemovePhotoObject'
+import AppParaphrase from './pages/apps/AppParaphrase'
+import AppPhotoColorization from './pages/apps/AppPhotoColorization'
+import AppPhotoLowLightEnhance from './pages/apps/AppPhotoLowLightEnhance'
 
 
 // Configuration
@@ -27,68 +31,35 @@ const navbarPages = [
 
 
 const apps = [
-  // App 1: Photo Background Removal
   {
-    name: "Photo Background Removal",
-    description: "Use AI to remove background of photo in seconds.",
-    route: "photo-background-removal",
-    image: "images/apps/photo-background-removal.jpg",
-    element: (() => {
-      const data = {
-        iframeUrlMain: "https://",
-        iframeUrlBackup: "https://",
-      }
-      return <PhotoBGRemoverApp data={data} />
-    })(),
-    isOnline: true,
+    name: "Photo Background Changer",
+    description: "Use AI to change or remove background of photo in seconds.",
+    route: "remove-photo-background",
+    element: <AppRemovePhotoBackground/>,
   },
-  
-  // App 2: Video Background Removal
   {
-    name: "Video Background Removal",
-    description: "Need to change virtual background? Or just need to remove the background? This AI app will help.",
-    route: "video-background-removal",
-    image: "images/apps/video-background-removal.jpg",
-    element: (() => {
-      const data = {
-        iframeUrlMain: "https://",
-        iframeUrlBackup: "https://",
-      }
-      return <></>
-    })(),
-    isOnline: false,
+    name: "Text Paraphraser",
+    description: "This AI can rewrite your text with minimal similarity.",
+    route: "paraphrase",
+    element: <AppParaphrase/>,
   },
-  
-  // App 3: Realistic Text To Speech
   {
-    name: "Realistic Text-to-Speech",
-    description: "This app use AI to generate realistic human-like voices. Just from a text!",
-    route: "realistic-text-to-speech",
-    image: "images/apps/realistic-text-to-speech.jpg",
-    element: (() => {
-      const data = {
-        iframeUrlMain: "https://",
-        iframeUrlBackup: "https://",
-      }
-      return <></>
-    })(),
-    isOnline: false,
+    name: "Remove Object From Photo",
+    description: "Thanks to our AI, you just need to draw the part of image that you want to remove.",
+    route: "remove-photo-object",
+    element: <AppRemovePhotoObject/>,
   },
-  
-  // More apps
   {
-    name: "Our Next AI App",
-    description: "We continuously build AI apps to meet what the world needs. Stay tuned for our next apps!",
-    route: "next-app",
-    image: "images/apps/next-app.jpg",
-    element: (() => {
-      const data = {
-        iframeUrlMain: "https://",
-        iframeUrlBackup: "https://",
-      }
-      return <></>
-    })(),
-    isOnline: false,
+    name: "Colorize Gray Photo",
+    description: "Colorize old or grayscale photo in seconds.",
+    route: "photo-colorization",
+    element: <AppPhotoColorization/>,
+  },
+  {
+    name: "Enhance Low Light Image",
+    description: "Your photo is too dark or needs enhancement? This AI is for you.",
+    route: "photo-low-light-enhance",
+    element: <AppPhotoLowLightEnhance/>,
   },
 ]
 

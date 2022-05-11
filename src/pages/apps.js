@@ -5,20 +5,55 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import AppItem from '../components/AppListItem';
+import axios from 'axios';
 
-
-const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 export default function Apps({ apps }) {
   /**
-   * props:
-   * - apps
-   *  .name
-   *  .description
-   *  .icon
-   *  .background
-   *  .route
+   * apps
+   * .name: str
+   * .description: str
+   * .route: str (equivalent to deta app name)
+   * .element: Component
+   * .status: str (online, offline, loading), added after copy
    */
+  
+  let appsCopy = apps.map(val => ({...val, status: "loading"}))
+  let [appsData, setAppsData] = React.useState(appsCopy)
+  
+  const getDetaAppStatus = (appName, detaApps) => {
+    try {
+      const detaApp = detaApps.find(dApp => dApp.name === appName)
+      return detaApp.is_active ? "online" : "offline"
+    }
+    catch (err) {
+      console.log(err.message)
+      return "offline"
+    }
+  }
+  
+  React.useEffect(() => {
+    // Change the app status according to status from deta server.
+    // The apps must match appRoutes.
+    
+    axios.get(`https://dsa1jvcch.deta.dev/get_services/FxfK3lktAAFxfK3lktAmyatpS17iju9H0tAmyqfzNJ`)
+      
+      .then(res => {
+        // Process the returned data, update app statuses.
+        const detaApps = res.data
+        setAppsData(oldVal =>
+          apps.map(val => ({...val, status: getDetaAppStatus(val.route, detaApps)}))
+        )
+      })
+      
+      .catch(err => {
+        // Set all apps status to offline.
+        setAppsData(oldVal =>
+          apps.map(val => ({...val, status: "offline"}))
+        )
+      })
+    
+  }, [])
   
   return (
     <>
@@ -49,9 +84,17 @@ export default function Apps({ apps }) {
         <Container sx={{py: 8}} maxWidth="md">
           {/* End hero unit */}
           <Grid container spacing={4}>
-            {apps.map((application) => (
-              <AppItem appItem={application}></AppItem>
+            
+            {appsData.map((application) => (
+              <AppItem
+                name={application.name}
+                description={application.description}
+                route={application.route}
+                status={application.status}
+                element={application.element}
+              />
             ))}
+            
           </Grid>
         </Container>
       </main>

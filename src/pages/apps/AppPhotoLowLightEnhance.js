@@ -36,7 +36,7 @@ export default function AppPhotoLowLightEnhance() {
           <IframeResizer
             log
             inPageLinks
-            src={res.data.service.url}
+            src="https://aryadytm-photo-low-light-enhance.hf.space/?__theme=light#lighttheme"
             heightCalculationMethod="lowestElement"
             scrolling="no"
             style={{width: '1px', minWidth: '100%', minHeight: '100vh', flexGrow: 1, overflow: "hidden"}}

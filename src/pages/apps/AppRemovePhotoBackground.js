@@ -29,6 +29,7 @@ export default function AppRemovePhotoBackground() {
   )
 
   useEffect(() => {
+    console.log("Page loading")
     axios.get(`https://dsa1jvcch.deta.dev/get_service/FxfK3lktAAFxfK3lktAmyatpS17iju9H0tAmyqfzNJ/${appRoute}`)
       .then(res => {
         // Change to iframe
@@ -36,10 +37,10 @@ export default function AppRemovePhotoBackground() {
           <IframeResizer
             log
             inPageLinks
-            src={res.data.service.url}
+            src="https://aryadytm-remove-photo-background.hf.space/?__theme=light#lighttheme"
             heightCalculationMethod="lowestElement"
-            scrolling="no"
-            style={{width: '1px', minWidth: '100%', minHeight: '100vh', flexGrow: 1, overflow: "hidden"}}
+            style={{width: '1px', minWidth: '100%', minHeight: '100vh'}}
+            scrolling="yes"
           />
         )
       })

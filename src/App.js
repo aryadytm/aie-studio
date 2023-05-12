@@ -63,40 +63,11 @@ const apps = [
   },
 ]
 
-// const team = [
-//   {
-//     name: "Arya Adyatma",
-//     nim: "2501985836",
-//     position: "Chief Technology Officer"
-//   },
-//   {
-//     name: "Kenneth Edbert Wijaya Chi",
-//     nim: "2501970374",
-//     position: "(Position)"
-//   },
-//   {
-//     name: "Muhammad Rafly Basrie",
-//     nim: "2502004872",
-//     position: "(Position)"
-//   },
-//   {
-//     name: "Nikodemus Aurelius Aristo",
-//     nim: "2501987381",
-//     position: "(Position)"
-//   },
-//   {
-//     name: "Reno Reynaldo",
-//     nim: "2501961975",
-//     position: "(Position)"
-//   },
-// ]
-
-
 const team = [
   {
-    name: "Entrepreneurship Ideation - Kelompok 2 - LA80",
-    nim: "We are a group of students from BINUS University majoring in Business Information Technology and Accounting Technology.",
-    position: ""
+    name: "Arya Adyatma",
+    nim: "Founder",
+    position: "https://linkedin.com/in/arya-adyatma-aryadytm"
   },
 ]
 

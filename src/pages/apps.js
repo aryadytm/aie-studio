@@ -90,7 +90,8 @@ export default function Apps({ apps }) {
                 name={application.name}
                 description={application.description}
                 route={application.route}
-                status={application.status}
+                // status={application.status}
+                status="online"
                 element={application.element}
               />
             ))}

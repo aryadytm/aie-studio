@@ -25,8 +25,9 @@ export default function Team({team}) {
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
-              BINUS Entrepreneurship Team
+              Meet the AIE Studio Team!
             </Typography>
+            
             <Typography variant="body2" color="text.secondary">
               <br />
               {
@@ -43,6 +44,17 @@ export default function Team({team}) {
                 ))
               }
             </Typography>
+            
+            {/* <Typography gutterBottom variant="p" component="div">
+              Contact us to work with us. Currently we need:<br/><br/>
+              - Marketer (Promote the app to the public, social media and digital promotion is preferred) <br /><br />
+              - Legal Advisor (Work with privacy policy and terms of service.
+              Advise for legal compliance with local and international government, such as PSE registration) <br /><br />
+              - Compute Provider (Provide compute resources, Nvidia GPUs are preferred to power our deep learning algorithms)
+              <br /><br />
+              Contact Email: arya[dot]adyatma[at]outlook[dot]com
+            </Typography>
+             */}
           </CardContent>
         </CardActionArea>
       </Card>

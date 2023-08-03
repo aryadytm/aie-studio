@@ -1,6 +1,12 @@
 # AIE Studio
 
-AI for Everyone: AI Assisted Multimedia Tools
+AI for Everyone: AI Assisted Multimedia Tools. Use the live app here: [https://aie-studio.netlify.app][https://aie-studio.netlify.app].
+
+![AIE Studio Picture](https://aie-studio.netlify.app/images/mockup.jpg)
+
+## Video Demo
+
+[https://www.youtube.com/watch?v=v2ihFYgqaIk](https://www.youtube.com/watch?v=v2ihFYgqaIk)
 
 ## Description
 
@@ -27,10 +33,6 @@ Backend:
 - Python
 - PyTorch
 - Huggingface Transformers
-
-## Video Teaser
-
-[https://www.youtube.com/watch?v=v2ihFYgqaIk](https://www.youtube.com/watch?v=v2ihFYgqaIk)
 
 ## Deploy
 

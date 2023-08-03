@@ -1,6 +1,6 @@
 # AIE Studio
 
-AI for Everyone: AI Assisted Multimedia Tools. Use the live app here: [https://aie-studio.netlify.app][https://aie-studio.netlify.app].
+AI for Everyone: AI Assisted Multimedia Tools. Use the live app here: [https://aie-studio.netlify.app](https://aie-studio.netlify.app).
 
 ![AIE Studio Picture](https://aie-studio.netlify.app/images/mockup.jpg)
 
